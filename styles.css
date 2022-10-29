@@ -23,6 +23,22 @@
     background: black;
     filter: grayscale(70%);
 }
+
+.card img {
+    max-height: 370px;
+    object-fit: cover;
+    object-position: top;
+}
+
+#lugar-fecha {
+    background-color: #343a40;
+    color: white;
+}
+
+#lugar-fecha img {
+    max-width: 100%;
+}
+
 #footer {
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(38,27,69,1) 61%, rgba(5,5,57,1) 76%); 
