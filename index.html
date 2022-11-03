@@ -12,9 +12,9 @@
     <title>Suvliminal</title>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="60.25">
     <!-- Header -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/letrasSuvliminal.png" alt="logoSuvliminal">
@@ -23,19 +23,22 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Biografía</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#main">Biografía</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Integrantes</a>
+              <a class="nav-link" href="#integrantes">Integrantes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Proximos show</a>
+              <a class="nav-link" href="#proximos-show">Proximos show</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-suvliminal" href="#">Contáctanos</a>
+              <a class="nav-link" href="#solicita-presentacion">Solicita una presentación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-suvliminal" href="#" data-toggle="modal" data-target="#modalCompra">Compra tickets</a>
             </li>
           </ul>
         </div>
@@ -72,8 +75,8 @@
                 cargado de agresividad en contra de las injusticias provocadas
                 por las policías, el cual será promocionado en varias
                 presentaciones en vivo programadas para el verano 2022. </p>
-                <a href="#" class="btn btn-outline-light">Quiero contactarlos</a>
-                <button type="button" class="btn btn-suvliminal">Próximo show</button>
+                <a href="#solicita-presentacion" class="btn btn-outline-light">Los quiero en mi evento</a>
+                <button type="button" class="btn btn-suvliminal" data-toggle="modal" data-target="#modalCompra">Comprar tickets próximo show</button>
               </div>
             </div>
           </div>
@@ -103,7 +106,7 @@
                   <span class="badge badge-warning">Voz secundaria</span>
                 </div>
                 <p class="card-text">Guitarra/coros</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="https://www.instagram.com/audiovisat/" class="btn btn-primary btn-block"><i class="fa-brands fa-instagram"></i> Intagram personal</a>
               </div>
             </div>
           </div>
@@ -116,7 +119,7 @@
                   <span class="badge badge-danger">Voz principal</span>
                 </div>
                 <p class="card-text">Voz</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="https://www.instagram.com/juan_suv/" class="btn btn-primary btn-block"><i class="fa-brands fa-instagram"></i> Intagram personal</a>
               </div>
             </div>
           </div>
@@ -129,7 +132,7 @@
                   <span class="badge badge-info">Batería</span>
                 </div>
                 <p class="card-text">Batería</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="https://www.instagram.com/gabriel.suv/" class="btn btn-primary btn-block"><i class="fa-brands fa-instagram"></i> Intagram personal</a>
               </div>
             </div>
           </div>
@@ -143,7 +146,7 @@
                   <span class="badge badge-warning">Voz secundaria</span>
                 </div>
                 <p class="card-text">Bajo/coros</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="https://www.instagram.com/felip3fauvas/" class="btn btn-primary btn-block"><i class="fa-brands fa-instagram"></i> Intagram personal</a>
               </div>
             </div>
           </div>
@@ -156,7 +159,7 @@
                   <span class="badge badge-success">Guitarra</span>
                 </div>
                 <p class="card-text">Guitarra</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="https://www.instagram.com/_kutxal/" class="btn btn-primary btn-block"><i class="fa-brands fa-instagram"></i>Instagram personal</a>
               </div>
             </div>
           </div>
@@ -175,7 +178,7 @@
         </div>
       </div>
     </div>
-    <section id="lugar-fecha">
+    <section id="proximos-show">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-lg-6 pl-0 pr-0">
@@ -210,7 +213,7 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            Envíanos los datos del evento donde quieres que se presente Suvliminal con todos los detalles
+            Envíanos los datos del evento donde quieres que se presente Suvliminal con todos los <abbr data-toggle="tooltip" title="tipo de evento, lugar, fecha, hora, ficha técnica, etc.">detalles</abbr>
           </div>
         </div>
         <div class="row">
@@ -235,7 +238,7 @@
               </div>
               <div class="form-row">
                 <div class="col mt-2">
-                  <button type="button" class="btn btn-suvliminal btn-block">Enviar</button>
+                  <button type="button" class="btn btn-suvliminal btn-block" data-toggle="tooltip" data-placement="top" title="Envía la solicitud">Enviar</button>
                 </div>
               </div>
             </form>
@@ -271,17 +274,45 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Modal -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Comprar tickets</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-warning" role="alert">
+              Recibirás un correo con link para comprar tus tickets
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-suvliminal">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
+    <!-- /Modal -->
+
+    <!-- jQuery first, then popper, then bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/68e18b352a.js" crossorigin="anonymous"></script>
   </body>
 </html>

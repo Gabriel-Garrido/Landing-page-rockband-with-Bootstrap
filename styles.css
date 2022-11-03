@@ -30,12 +30,12 @@
     object-position: top;
 }
 
-#lugar-fecha {
+#proximos-show {
     background-color: #343a40;
     color: white;
 }
 
-#lugar-fecha img {
+#proximos-show img {
     max-width: 100%;
 }
 
